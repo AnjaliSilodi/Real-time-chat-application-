@@ -1,5 +1,9 @@
 # Real-time-chat-application-
 The Real-Time Chat Application is a web-based messaging platform that enables users to communicate instantly through a user-friendly interface. Built using Node.js and Socket.IO, this application supports real-time messaging, allowing users to join chat rooms, send and receive messages seamlessly.
+The public folder contains all client-side files essential for the application's functionality, ensuring efficient serving of static files separate from server-side logic. Key files include:
+index.html, style.css, main.js
+
+
 
 ![Screenshot 2024-10-24 180937](https://github.com/user-attachments/assets/77b6881e-6c61-41d5-af6a-f7aa3d55a836)
 
