@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header>Lets's Chat</header>
+        
+        <!-- User display section -->
+        <div id="user-display" class="user-display">
+            <img id="user-photo-display" class="user-photo" src="" alt="User Photo" style="display:none;">
+            <span id="username-display"></span>
+        </div>
+
+        <!-- Message display section -->
+        <div id="messages"></div>
+
+        <!-- Message input section -->
+        <form id="chat-form" style="display: none;">
+            <input id="msg" autocomplete="off" placeholder="Type your message...">
+            <button>Send</button>
+        </form>
+    </div>
+
+    <!-- User Input Dialog -->
+    <div id="user-dialog" class="dialog">
+        <div class="dialog-content">
+            <h2>User Details</h2>
+            <label for="photo">Enter your name:</label>
+            <input id="username" type="text" placeholder="Enter your name" required><br>
+            <label for="photo">Add Picture:</label> <!-- Added label for image input -->
+            <input id="photo" type="file" accept="image/*" required>
+            <button id="join-chat">Join Chat</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; /* Increased width */
+    height: 80vh; /* Increased height */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    font-size: 1.8em; /* Increased font size */
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* User display styling */
+.user-display {
+    font-size: 1.4em;
+    color: #1dd1a1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#messages {
+    flex: 1; /* This allows the message box to expand vertically */
+    height: auto;
+    background-color: #333;
+    border-radius: 5px;
+    overflow-y: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chat-form {
+    display: flex;
+    padding-top: 10px;
+}
+
+#msg {
+    flex: 1;
+    padding: 15px; /* Increased padding for larger input */
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    color: white;
+    background-color: #444;
+    margin-right: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#msg::placeholder {
+    color: #aaa;
+}
+
+button {
+    padding: 15px; /* Increased button size */
+    border: none;
+    border-radius: 5px;
+    background-color: #1dd1a1;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #10ac84;
+}
+
+/* Modal styles */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000; /* Ensure it's above everything else */
+}
+
+.dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.dialog-content {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+}
+
+.dialog-content input {
+    margin: 10px 0; /* Margin between inputs */
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #444;
+    color: white;
+    width: calc(100% - 20px);
+}
+
+/* User photo styling */
+.user-photo {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    border-radius: 50%; /* Make it circular */
+    margin-right: 10px; /* Space between photo and username */
+    vertical-align: middle; /* Align the image with text */
+}
+
+/* System messages (like "User joined") */
+.system-message {
+    color: #ffdd57;
+    font-style: italic;
+}
+
+/* Messages styling */
+.message-content {
+    padding: 15px;
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 60%;
+}
+
+/* My messages (align right) */
+.my-message {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.my-message .message-content {
+    background-color: #1dd1a1;
+    color: #fff;
+    text-align: right;
+}
+
+/* Other user's messages (align left) */
+.other-message {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.other-message .message-content {
+    background-color: #444;
+    color: #fff;
+    text-align: left;
+}
